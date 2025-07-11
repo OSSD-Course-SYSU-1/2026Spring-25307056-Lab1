@@ -57,6 +57,11 @@ entry/src/main/
 * 本示例意图调用没有过多介入业务逻辑和UI逻辑，只是通过不同渠道把相关参数传递给业务，将页面跳转主动权交给业务本身。
   onExecuteInUIAbilityForegroundMode接口也提供了WindowStage实例，可以使用windowStage.loadContent加载特定页面，应用根据实际选择合适的方式。
 
+## 时序流程图
+
+![Timing interaction diagram](screenshots/timing_diagram.png)
+
+
 ## 相关权限
 
 ### 依赖
