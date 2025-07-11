@@ -56,9 +56,6 @@ For intent to share the source code, see the shareIntent method in PlayPage.ets,
 * Intent: Pass parameters to the homepage through eventHub during hot start, and pass want parameters to the homepage through the onCreate method with the help of localStorage objects during cold start
 * In this example, the intent call does not involve too much in the business logic and UI logic, but only passes the relevant parameters to the business through different channels, and hands over the initiative of page jump to the business itself.
   The onExecuteInUIAbilityForegroundMode operation also provides a WindowStage instance, which can use windowStage.loadContent to load specific pages.
-## Timing interaction diagram
-
-![Timing interaction diagram](screenshots/timing_diagram.png)
 
 ## Required Permissions
 
