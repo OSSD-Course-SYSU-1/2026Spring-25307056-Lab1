@@ -52,7 +52,7 @@ entry/src/main/
 * 意图共享：游戏页在aboutToAppear事件中调用shareIntent方法，根据游戏id，在事先读取的shareIntent.json数据中筛选出相关意图数据，然后调用insightIntent.shareIntent
   API实现意图数据共享
 * 意图调用：在onExecuteInUIAbilityForegroundMode方法中，使用eventHub.emit广播事件，传递entityId游戏id参数。
-  index.ets中通过eventHub.on监听事件，通过navPathStack.replacePathByName触发跳转到游戏页面
+  Index.ets中通过eventHub.on监听事件，通过navPathStack.replacePathByName触发跳转到游戏页面
 * 意图调用热启动时通过eventHub传递参数给首页，冷启动时通过onCreate方法借助localStorage对象将want特定参数传递给首页
 * 本示例意图调用没有过多介入业务逻辑和UI逻辑，只是通过不同渠道把相关参数传递给业务，将页面跳转主动权交给业务本身。
   onExecuteInUIAbilityForegroundMode接口也提供了WindowStage实例，可以使用windowStage.loadContent加载特定页面，应用根据实际选择合适的方式。
@@ -70,7 +70,7 @@ entry/src/main/
 
 1. <font>**意图共享和意图调用的测试，当前无法由开发者独立完成，请根据[Intents
    Kit接入流程](https://developer.huawei.com/consumer/cn/doc/harmonyos-guides/intents-habit-rec-dp-self-validation)，通过邮箱向华为意图框架接口人提交验收申请，由接口人配合开发者一同完成测试验收。**</font>
-2. 本示例仅支持标准系统上运行，支持设备：华为手机、华为平板。
+2. 本示例仅支持标准系统上运行，支持设备：华为手机。
 3. HarmonyOS系统：HarmonyOS 5.0.5 Release及以上。
 4. DevEco Studio版本：DevEco Studio 5.0.5 Release及以上。
 5. HarmonyOS SDK版本：HarmonyOS 5.0.5 Release SDK及以上。
