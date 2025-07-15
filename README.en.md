@@ -19,28 +19,28 @@ Directions of use:
 ## Project Directory
 
 ```
-├── entry/src/main/ets
-│  ├── common
-│  │  ├── utils
-│  │  │  ├── FileReader.ets              // File Reader class
-│  │  │  └── Logger.ets                  // Logger class
-│  │  └── constants
-│  │     └── CommonConstants.ets         // Common constants class
-│  ├── entryability
-│  │  └── EntryAbility.ets               // Entry Ability
-│  ├── pages
-│  │  ├── Index.ets                      // Entry page of the application
-│  │  └── PlayPage.ets                   // Detail page
-│  └── insightintents
-│     └── IntentExecutorImpl.ets         // Intent execution class
-└── entry/src/main/resources             // Application resource directory
-   ├── base
-   |  └── profile
-   |     ├── insight_intent.json         // Intent registration configuration
-   |     └── main_pages.json             // Application page list
-   └── rawfile
-      ├── shareIntent.json               // Intent sharing data example
-      └── game.json                      // Game information example
+├──entry/src/main/ets
+│  ├──common
+│  │  ├──utils
+│  │  │  ├──FileReader.ets              // File Reader class
+│  │  │  └──Logger.ets                  // Logger class
+│  │  └──constants
+│  │     └──CommonConstants.ets         // Common constants class
+│  ├──entryability
+│  │  └──EntryAbility.ets               // Entry Ability
+│  ├──pages
+│  │  ├──Index.ets                      // Entry page of the application
+│  │  └──PlayPage.ets                   // Detail page
+│  └──insightintents
+│     └──IntentExecutorImpl.ets         // Intent execution class
+└──entry/src/main/resources             // Application resource directory
+   ├──base
+   |  └──profile
+   |     ├──insight_intent.json         // Intent registration configuration
+   |     └──main_pages.json             // Application page list
+   └──rawfile
+      ├──shareIntent.json               // Intent sharing data example
+      └──game.json                      // Game information example
 ```
 
 ## Implementation Details
