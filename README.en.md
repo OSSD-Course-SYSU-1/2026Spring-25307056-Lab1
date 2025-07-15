@@ -19,28 +19,28 @@ Directions of use:
 ## Project Directory
 
 ```
-entry/src/main/
-├──ets
-|  ├──common/constants
-|  |  └──CommonConstants.ets                               // 公共常量类
-|  └──common/utils
-|  |  ├──FileReader.ets                                    // 文件读取类
-|  |  └──Logger.ets                                        // 日志类
-|  ├──entryability
-|  |  └──EntryAbility.ets                                  // 入口Ability
-|  ├──insightintents
-|  |  └──IntentExecutorImpl.ets                            // 意图调用类
-|  └──pages
-|     ├──Index.ets                                         // 首页
-|     └──PlayPage.ets                                      // 详情页
-└──resources
-├──base
-|  ├──profile
-|  |  ├──insight_intent.json                            // 意图注册配置
-|  |  └──main_pages.json                                // 应用界面列表
-└──rawfile
-├──shareIntent.json                                  // 意图共享数据示例
-└──game.json                                         // 游戏信息示例
+├── entry/src/main/ets
+│  ├── common
+│  │  ├── utils
+│  │  │  ├── FileReader.ets              // File Reader class
+│  │  │  └── Logger.ets                  // Logger class
+│  │  └── constants
+│  │     └── CommonConstants.ets         // Common constants class
+│  ├── entryability
+│  │  └── EntryAbility.ets               // Entry Ability
+│  ├── pages
+│  │  ├── Index.ets                      // Entry page of the application
+│  │  └── PlayPage.ets                   // Detail page
+│  └── insightintents
+│     └── IntentExecutorImpl.ets         // Intent execution class
+└── entry/src/main/resources             // Application resource directory
+   ├── base
+   |  └── profile
+   |     ├── insight_intent.json         // Intent registration configuration
+   |     └── main_pages.json             // Application page list
+   └── rawfile
+      ├── shareIntent.json               // Intent sharing data example
+      └── game.json                      // Game information example
 ```
 
 ## Implementation Details
