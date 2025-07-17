@@ -10,31 +10,31 @@
     },
     {
       "name": "EntryAbility_label",
-      "value": "意图游戏复访"
+      "value": "Intent game revisit"
     },
     {
       "name": "Navbar_title",
-      "value": "意图推荐-游戏复访"
+      "value": "Intent Recommendation - Game Review"
     },
     {
       "name": "List_title",
-      "value": "休闲游戏"
+      "value": "Casual games"
     },
     {
       "name": "game_card_title_first",
-      "value": "小游戏1"
+      "value": "Mini-game 1"
     },
     {
       "name": "game_card_desc_first",
-      "value": "这是小游戏1的描述信息"
+      "value": "This is the description of Game 1"
     },
     {
       "name": "game_card_title_second",
-      "value": "小游戏2"
+      "value": "Mini-game 2"
     },
     {
       "name": "game_card_desc_second",
-      "value": "这是小游戏2的描述信息"
+      "value": "This is the description of Game 2"
     }
   ]
 }
