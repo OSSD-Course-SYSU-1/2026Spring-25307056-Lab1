@@ -1,8 +1,8 @@
-# 基于意图框架习惯推荐常用复访示例代码
+# 基于意图框架及习惯推荐能力实现常用复访
 
 ## 介绍
 
-- 本示例基于意图框架，使用`@kit.IntentsKit`实现意图共享，使用`@kit.AbilityKit`的`InsightIntentExecutor`
+本示例基于意图框架，使用`@kit.IntentsKit`实现意图共享，使用`@kit.AbilityKit`的`InsightIntentExecutor`
   实现意图调用。根据意图调用的参数实现游戏复访。
 
 ## 效果预览
