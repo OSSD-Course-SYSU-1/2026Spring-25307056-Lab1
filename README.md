@@ -12,7 +12,7 @@
 | ![界面展示](screenshots/device/1.png "界面展示") | ![模拟游戏](screenshots/device/2.png "模拟游戏") |![小艺建议展示界面0](screenshots/device/3.png "小艺建议展示界面0") | ![意图调用0](screenshots/device/2.png "意图调用0") |
 
 使用说明：
-1. 点击`小游戏1或2`的卡片进入游戏卡片页面。进入游戏页面会调用 shareIntent()接口。游戏卡片页面底部会显示接口执行状态。
+1. 点击`小游戏1或2`的卡片进入游戏卡片页面。进入游戏页面会调用shareIntent()接口。游戏卡片页面底部会显示接口执行状态。
 2. 待系统将共享的意图完成处理后，将会在小艺建议的卡片内展示共享的意图。
 3. 点击展示的对应小艺卡片，会重新拉起示例应用，完成游戏卡片的复访。
 
@@ -45,17 +45,17 @@
 
 ## 具体实现
 
-意图共享源码参考PlayPage.ets中的shareIntent方法，意图调用源码参考IntentExecutorImpl.ets中的onExecuteInUiAbilityForegroundMode方法。
+意图共享源码参考`PlayPage.ets`中的`shareIntent`方法，意图调用源码参考`IntentExecutorImpl.ets`中的`onExecuteInUiAbilityForegroundMode`方法
 
-* 首页：从game.json文件中读取游戏信息，ForEach生成游戏卡片，卡片的onClick事件中通过navPathStack.replacePathByName跳转到游戏页面。
-* 游戏页：游戏页根据导航参数，显示游戏相关信息。
-* 意图共享：游戏页在aboutToAppear事件中调用shareIntent方法，根据游戏id，在事先读取的shareIntent.json数据中筛选出相关意图数据，然后调用insightIntent.shareIntent
-  API实现意图数据共享。
-* 意图调用：在onExecuteInUIAbilityForegroundMode方法中，使用eventHub.emit广播事件，传递entityId游戏id参数。
-  Index.ets中通过eventHub.on监听事件，通过navPathStack.replacePathByName触发跳转到游戏页面。
-* 意图调用热启动时通过eventHub传递参数给首页，冷启动时通过onCreate方法借助localStorage对象将want特定参数传递给首页。
+* 首页：从`game.json`文件中读取游戏信息，`ForEach`生成游戏卡片，卡片的`onClick`事件中通过`navPathStack.replacePathByName`跳转到游戏页面
+* 游戏页：游戏页根据导航参数，显示游戏相关信息
+* 意图共享：游戏页在`aboutToAppear`事件中调用`shareIntent`方法，根据游戏id，在事先读取的`shareIntent.json`数据中筛选出相关意图数据，然后调用`insightIntent.shareIntent`
+  API实现意图数据共享
+* 意图调用：在`onExecuteInUIAbilityForegroundMode`方法中，使用`eventHub.emit`广播事件，传递`entityId`游戏id参数。
+  `Index.ets`中通过`eventHub.on`监听事件，通过`navPathStack.replacePathByName`触发跳转到游戏页面
+* 意图调用热启动时通过`eventHub`传递参数给首页，冷启动时通过`onCreate`方法借助`localStorage`对象将want特定参数传递给首页
 * 本示例意图调用没有过多介入业务逻辑和UI逻辑，只是通过不同渠道把相关参数传递给业务，将页面跳转主动权交给业务本身。
-  onExecuteInUIAbilityForegroundMode接口也提供了WindowStage实例，可以使用windowStage.loadContent加载特定页面，应用根据实际选择合适的方式。
+  `onExecuteInUIAbilityForegroundMode`接口也提供了`WindowStage`实例，可以使用`windowStage.loadContent`加载特定页面，应用根据实际选择合适的方式。
 
 
 ## 相关权限
