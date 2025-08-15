@@ -17,28 +17,28 @@ Instructions:
 ## Project Directory
 
 ```
-entry/src/main/
-├──ets
-|  ├──common/constants
-|  |  └──CommonConstants.ets                               // Common constant class
-|  └──common/utils
-|  |  ├──FileReader.ets                                    // File reading class
-|  |  └──Logger.ets                                        // Log class
-|  ├──entryability
-|  |  └──EntryAbility.ets                                  // Entry page of the application implemented via Ability
-|  ├──insightintents
-|  |  └──IntentExecutorImpl.ets                            // Intent call class
-|  └──pages
-|     ├──Index.ets                                         // Home Page
-|     └──PlayPage.ets                                      // Detail Page
-└──resources
+├──entry/src/main/ets
+│  ├──common
+│  │  ├──utils
+│  │  │  ├──FileReader.ets              // File reading class
+│  │  │  └──Logger.ets                  // Log class
+│  │  └──constants
+│  │     └──CommonConstants.ets         // Common constant class
+│  ├──entryability
+│  │  └──EntryAbility.ets               // Entry page of the application implemented via Ability
+│  ├──pages
+│  │  ├──Index.ets                      // Home Page
+│  │  └──PlayPage.ets                   // Detail Page
+│  └──insightintents
+│     └──IntentExecutorImpl.ets         // Intent call class
+└──entry/src/main/resources            
    ├──base
-   |  ├──profile
-   |  |  ├──insight_intent.json                            // Intent registration configuration
-   |  |  └──main_pages.json                                // App UI list
+   │  └──profile
+   │     ├──insight_intent.json         // Intent registration configuration
+   │     └──main_pages.json             // App UI list
    └──rawfile
-      ├──shareIntent.json                                  // Example of sharing intent data
-      └──game.json                                         // Example of game information
+      ├──shareIntent.json               // Example of sharing intent data
+      └──game.json                      // Example of game information
 ```
 
 ## How to Implement
