@@ -83,7 +83,7 @@ struct Index {
   titleBuilder() {
     Column() {
       Text($r('app.string.Navbar_title'))
-        .fontSize(i18n.System.getSystemLanguage() === "en-Latn-US" ? 18 : 30)
+        .fontSize(i18n.System.getSystemLanguage() === CommonConstants.ENG_LANGUAGE ? 18 : 30)
         .lineHeight(40)
         .fontWeight(FontWeight.Bold)
         .width("100%")

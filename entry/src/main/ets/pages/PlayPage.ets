@@ -16,6 +16,7 @@
 import { insightIntent } from '@kit.IntentsKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { common } from '@kit.AbilityKit';
+import { i18n } from '@kit.LocalizationKit';
 import { IGameInfo } from '../model/DataModel';
 import CommonConstants, { ShareStatus } from '../common/constants/CommonConstants';
 import { FileReader } from '../common/utils/FileReader';
@@ -39,7 +40,8 @@ export struct PlayPage {
     // read shareIntent.json
     this.shareIntentList =
       await FileReader.readJson(this.abilityContext as common.UIAbilityContext,
-        CommonConstants.INTENT_FILE_NAME) as insightIntent.InsightIntent[];
+        i18n.System.getSystemLanguage() === CommonConstants.ENG_LANGUAGE ?
+        CommonConstants.INTENT_ENG_FILE_NAME : CommonConstants.INTENT_FILE_NAME) as insightIntent.InsightIntent[];
     // share intent
     this.shareIntent();
   }

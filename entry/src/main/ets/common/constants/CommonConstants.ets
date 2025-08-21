@@ -31,6 +31,10 @@ export default class CommonConstants {
    */
   static readonly INTENT_FILE_NAME: string = 'shareIntent.json';
   /**
+   * share intent list en file name
+   */
+  static readonly INTENT_ENG_FILE_NAME: string = 'shareIntent_en.json';
+  /**
    * navDestination name
    */
   static PLAY_PATH_NAME: string = 'PlayPage';
@@ -38,6 +42,10 @@ export default class CommonConstants {
    * share status text label
    */
   static SHARE_STATUS_TEXT: string = 'share intent status: ';
+  /**
+   * Eng language
+   */
+  static ENG_LANGUAGE: string = 'en-Latn-US';
 }
 
 export enum ShareStatus {
