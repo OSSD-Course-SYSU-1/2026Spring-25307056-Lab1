@@ -58,7 +58,7 @@ Refer to the `shareIntent` method in `PlayPage.ets` for the source code related 
 3. You need to be connected to the internet to log in to your HUAWEI ID and accept the Celia Suggestions user agreement and privacy policy.
 
 ### Constraints
-1. **Currently, the intent sharing and intent call tests cannot be completed independently by developers. You need to submit an acceptance application to the Huawei Intents Kit contact by email following the [Intents Kit Integration Process]((https://developer.huawei.com/consumer/en/doc/harmonyos-guides/intents-habit-rec-dp-self-validation)). The contact person will assist you to complete the test and acceptance**.
+1. **Currently, the intent sharing and intent call tests cannot be completed independently by developers. You need to submit an acceptance application to the Huawei Intents Kit contact by email following the [Intents Kit Integration Process](https://developer.huawei.com/consumer/en/doc/harmonyos-guides/intents-habit-rec-dp-self-validation). The contact person will assist you to complete the test and acceptance**.
 2. This sample is only supported on Huawei phones running standard systems.
 3. The HarmonyOS version must be HarmonyOS 5.0.5 Release or later.
 4. The DevEco Studio version must be DevEco Studio 5.0.5 Release or later.
