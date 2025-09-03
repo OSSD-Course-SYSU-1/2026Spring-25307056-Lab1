@@ -30,8 +30,14 @@ export class FileReader {
     }
   }
 
-  private static readContent(filePath: string): Promise<string> {
-    return fs.readText(filePath);
+  private static async readContent(filePath: string): Promise<string> {
+    try {
+      return await fs.readText(filePath);
+    } catch (err) {
+      let error = err as BusinessError;
+      Logger.error(`FileReader`, `readContent error.code => ${error.code}, error.message => ${error.message}`);
+      return '';
+    }
   }
 
   private static async readRawFileContent(context: Context, filepath: string): Promise<object> {

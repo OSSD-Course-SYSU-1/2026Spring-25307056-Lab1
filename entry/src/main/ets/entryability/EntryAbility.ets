@@ -17,6 +17,7 @@ import { AbilityConstant, ConfigurationConstant, UIAbility, Want } from '@kit.Ab
 import { hilog } from '@kit.PerformanceAnalysisKit';
 import { window } from '@kit.ArkUI';
 import CommonConstants from '../common/constants/CommonConstants';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 const DOMAIN = 0x0000;
 let para: Record<string, string> = { 'entityId': '' }
@@ -25,10 +26,15 @@ export default class EntryAbility extends UIAbility {
   storage: LocalStorage = new LocalStorage(para);
 
   onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
-    this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
-    if (launchParam.launchReason === AbilityConstant.LaunchReason.INSIGHT_INTENT && want && want.parameters) {
-      this.storage.setOrCreate(CommonConstants.STORAGE_KEY,
-        (want.parameters?.['ohos.insightIntent.executeParam.param'] as Record<string, string>)?.entityId);
+    try {
+      this.context.getApplicationContext().setColorMode(ConfigurationConstant.ColorMode.COLOR_MODE_NOT_SET);
+      if (launchParam.launchReason === AbilityConstant.LaunchReason.INSIGHT_INTENT && want && want.parameters) {
+        this.storage.setOrCreate(CommonConstants.STORAGE_KEY,
+          (want.parameters?.['ohos.insightIntent.executeParam.param'] as Record<string, string>)?.entityId);
+      }
+    } catch (err) {
+      let error = err as BusinessError;
+      hilog.error(DOMAIN, 'testTag', '%{public}s', `error.code is ${error.code}, error.message is ${error.message}`);
     }
     hilog.info(DOMAIN, 'testTag', '%{public}s', 'Ability onCreate');
   }
