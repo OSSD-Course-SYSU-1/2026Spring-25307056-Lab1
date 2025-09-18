@@ -21,26 +21,33 @@
 ```
 ├──entry/src/main/ets
 │  ├──common
-│  │  ├──utils
-│  │  │  ├──FileReader.ets              // 文件读取类
-│  │  │  └──Logger.ets                  // 日志类
-│  │  └──constants
-│  │     └──CommonConstants.ets         // 公共常量类
+│  │  ├──constants
+│  │  │  └──CommonConstants.ets         // 公共常量类
+│  │  └──utils
+│  │     ├──FileReader.ets              // 文件读取类
+│  │     └──Logger.ets                  // 日志类
 │  ├──entryability
 │  │  └──EntryAbility.ets               // 入口Ability
-│  ├──pages
-│  │  ├──Index.ets                      // Ability实现的应用的入口页面
-│  │  └──PlayPage.ets                   // 详情页
-│  └──insightintents
-│     └──IntentExecutorImpl.ets         // 意图调用类
+│  ├──entrybackupability
+│  │  └──EntryBackupAbility.ets         // 备份Ability
+│  ├──insightintents
+│  │  └──IntentExecutorImpl.ets         // 意图调用类
+│  ├──model
+│  │  └──DataModel.ets                  // 游戏模型类
+│  └──pages
+│     ├──Index.ets                      // Ability实现的应用的入口页面
+│     └──PlayPage.ets                   // 详情页
 └──entry/src/main/resources            
    ├──base
    │  └──profile
+   │     ├──backup_config.json          // 备份配置
    │     ├──insight_intent.json         // 意图注册配置
-   │     └──main_pages.json             // 应用界面列表
+   │     ├──main_pages.json             // 应用界面列表
+   │     └──router_map.json             // 路由配置
    └──rawfile
+      ├──game.json                      // 游戏信息示例
       ├──shareIntent.json               // 意图共享数据示例
-      └──game.json                      // 游戏信息示例
+      └──shareIntent_en.json            // 意图共享数据英文示例
 ```
 
 ## 具体实现

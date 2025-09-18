@@ -19,26 +19,33 @@ Instructions:
 ```
 ├──entry/src/main/ets
 │  ├──common
-│  │  ├──utils
-│  │  │  ├──FileReader.ets              // File reading class
-│  │  │  └──Logger.ets                  // Log class
-│  │  └──constants
-│  │     └──CommonConstants.ets         // Common constant class
+│  │  ├──constants
+│  │  │  └──CommonConstants.ets         // Common constant class
+│  │  └──utils
+│  │     ├──FileReader.ets              // File reading class
+│  │     └──Logger.ets                  // Log class
 │  ├──entryability
 │  │  └──EntryAbility.ets               // Entry page of the application implemented via Ability
-│  ├──pages
-│  │  ├──Index.ets                      // Home Page
-│  │  └──PlayPage.ets                   // Detail Page
-│  └──insightintents
-│     └──IntentExecutorImpl.ets         // Intent call class
+│  ├──entrybackupability
+│  │  └──EntryBackupAbility.ets         // Backup Ability
+│  ├──insightintents
+│  │  └──IntentExecutorImpl.ets         // Intent call class
+│  ├──model
+│  │  └──DataModel.ets                  // Game model class
+│  └──pages
+│     ├──Index.ets                      // Home Page
+│     └──PlayPage.ets                   // Detail Page
 └──entry/src/main/resources            
    ├──base
    │  └──profile
+   │     ├──backup_config.json          // Backup config
    │     ├──insight_intent.json         // Intent registration configuration
-   │     └──main_pages.json             // App UI list
+   │     ├──main_pages.json             // App UI list
+   │     └──router_map.json             // Router config
    └──rawfile
+      ├──game.json                      // Example of game information
       ├──shareIntent.json               // Example of sharing intent data
-      └──game.json                      // Example of game information
+      └──shareIntent_en.json            // English Example of sharing intent data
 ```
 
 ## How to Implement
